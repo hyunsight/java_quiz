@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class Quiz10 {
     public static void main(String[] args) {
-        System.out.println("--------------------");
-        System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
-        System.out.println("--------------------");
-
         Scanner scanner = new Scanner(System.in);
-
         int bankAccount = 0;
 
+        //boolean run = true; //실행 상태 (flag 변수)
+
         while (true) {
+            System.out.println("--------------------");
+            System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+            System.out.println("--------------------");
+
             System.out.print("선택: ");
             String inputOption = scanner.nextLine();
 
