@@ -100,6 +100,8 @@ public class CustomerApplication {
             return;
         } else if (customer.getPoint() < 500) {
             System.out.println("결과: 포인트가 500점 이상일 때 사용 가능합니다.");
+        } else if (customer.getPoint() < p) {
+            System.out.println("결과: 포인트가 부족합니다.");
         } else {
             customer.setPoint(customer.getPoint() - p);
             System.out.println("결과: 포인트 사용 완료되었습니다.");
