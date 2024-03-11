@@ -16,15 +16,18 @@ public class MapExample {
         int maxScore = 0; //최고 점수를 저장하는 변수
         int totalScore = 0; //점수 합계를 저장하는 변수
 
-        //여기에 코드를 작성하세요.
-        /*
-        평균 점수: 91
-        최고 점수: 96
-        최고 점수를 받은 아이디: blue
-         */
+        Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
 
-        Set<String> keySet = map.keySet();
-        Iterator<String> keyIterator = keySet.iterator();
+        for(Map.Entry<String, Integer> entry : entrySet) {
+            if(entry.getValue() > maxScore) {
+                name = entry.getKey();
+                maxScore = entry.getValue();
+            }
+            totalScore += entry.getValue();
+        }
+        System.out.println("평균점수: " + totalScore / map.size());
+        System.out.println("최고점수: " + maxScore);
+        System.out.println("최고 점수를 받은 아이디: " + name);
      }
 }
 
